@@ -5,7 +5,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return !0;
 
   // Obtener la imagen de perfil del usuario o usar una por defecto
-  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://i.ibb.co/vxLHX9D/file.jpg')
+  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://i.ibb.co/QJWfynP/file.jpg')
   let img = await (await fetch(pp)).buffer()
   
   let chat = global.db.data.chats[m.chat]
@@ -24,7 +24,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: groupMetadata.desc || 'sin descripción',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/jhgXwfD/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
           thumbnail: img
         }
       },
@@ -49,7 +49,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: groupMetadata.desc || 'sin descripción',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/jhgXwfD/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
           thumbnail: img
         }
       },
@@ -74,7 +74,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: groupMetadata.desc || 'sin descripción',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/jhgXwfD/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
           thumbnail: img
         }
       },
