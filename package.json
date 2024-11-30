@@ -1,6 +1,6 @@
 {
-  "name": "Sisked-Bot",
-  "version": "5.0.0",
+  "name": "Darly Bot",
+  "version": "8.5.0",
   "description": "Super WhatsApp Bot Multi Device",
   "main": "index.js",
   "type": "module",
@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/Inemagu/Bot-Sis",
+  "homepage": "https://github.com/Adrianmaze/Bot2",
   "author": {
     "name": "Sisked"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Inemagu/Bot-Sis.git"
+    "url": "git+https://github.com/Adrianmaze/Bot2.git"
   },
   "bugs": {
-    "url": "https://github.com/Inemagu/Bot-Sis/issues"
+    "url": "https://github.com/Adrianmaze/Bot2/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
