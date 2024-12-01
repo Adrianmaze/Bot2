@@ -22,7 +22,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
         externalAdReply: {
           title: global.packname,
           body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
-          mediaUrl: pp,
+          mediaUrl: 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R',
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
           thumbnail: img
