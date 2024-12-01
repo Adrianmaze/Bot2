@@ -20,8 +20,8 @@ export async function before(m, { conn, participants, groupMetadata }) {
       contextInfo: {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
-          title: groupMetadata.subject,
-          body: groupMetadata.desc || 'sin descripción',
+          title: global.packname,
+          body: '𝙐𝙉 𝙈𝙐𝙉𝘿𝙊 𝙈𝘼𝙍𝘼𝙑𝙄𝙇𝙇𝙊𝙎𝙊',
           mediaUrl: pp,
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
