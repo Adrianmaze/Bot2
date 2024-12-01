@@ -12,7 +12,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 27) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sWelcome || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenido 」\n└┬• 「 @${user} 」\n   │👸🏻  Bienvenido a\n   │🌸  ${groupMetadata.subject}\n   │🩷  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
+    let text = chat.sWelcome || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenido 」\n└┬• 「 ${user} 」\n   │👸🏻  Bienvenido a\n   │🌸  ${groupMetadata.subject}\n   │🩷  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -37,7 +37,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 28) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -62,7 +62,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 32) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
