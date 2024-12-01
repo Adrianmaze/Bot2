@@ -21,7 +21,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
           title: global.packname,
-          body: '𝘿𝙄𝙎𝙁𝙍𝙐𝙏𝘼\n𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
+          body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
@@ -46,7 +46,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
           title: global.packname,
-          body: groupMetadata.desc || 'sin descripción',
+          body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
@@ -71,7 +71,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
           title: global.packname,
-          body: groupMetadata.desc || 'sin descripción',
+          body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
