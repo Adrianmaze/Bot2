@@ -12,7 +12,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 27) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sWelcome || `┌─• 𝐃𝐀𝐑𝐋𝐄 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenido 」\n└┬• 「 @${user} 」\n   │👸🏻  Bienvenido a\n   │🌸  ${groupMetadata.subject}\n   │🩷  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
+    let text = chat.sWelcome || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenido 」\n└┬• 「 @${user} 」\n   │👸🏻  Bienvenido a\n   │🌸  ${groupMetadata.subject}\n   │🩷  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -21,7 +21,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
           title: global.packname,
-          body: '𝙐𝙉 𝙈𝙐𝙉𝘿𝙊 𝙈𝘼𝙍𝘼𝙑𝙄𝙇𝙇𝙊𝙎𝙊',
+          body: '𝘿𝙄𝙎𝙁𝙍𝙐𝙏𝘼\n𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
           thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
@@ -37,7 +37,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 28) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐄 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -45,7 +45,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
       contextInfo: {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
-          title: groupMetadata.subject,
+          title: global.packname,
           body: groupMetadata.desc || 'sin descripción',
           mediaUrl: pp,
           mediaType: 2,
@@ -62,7 +62,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 32) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐄 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 de 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 @${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -70,7 +70,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
       contextInfo: {
         mentionedJid: [m.messageStubParameters[0]],
         externalAdReply: {
-          title: groupMetadata.subject,
+          title: global.packname,
           body: groupMetadata.desc || 'sin descripción',
           mediaUrl: pp,
           mediaType: 2,
