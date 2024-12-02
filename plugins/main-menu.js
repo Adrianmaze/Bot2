@@ -43,7 +43,7 @@ const defaultMenu = {
 \t\t\t𝐃 𝐀 𝐑 𝐋 𝐘 - 𝐌 𝐄 𝐍 𝐔́
 `.trimStart(),
 header: '🦋「 *%category* 」🦋',
-body: '*┃⇾* *%cmd*\n',
+body: '┃⇾ *%cmd*\n',
 footer: '🧸 ღღღღ 🧸\n',
 after: '',
 }
