@@ -14,8 +14,8 @@ let tags = {
   'downloader': '𝘋𝘦𝘴𝘤𝘢𝘳𝘨𝘢𝘴 📥',
   'tools': '𝘏𝘦𝘳𝘳𝘢𝘮𝘪𝘦𝘯𝘵𝘢𝘴 🔧',
   'fun': '𝘋𝘪𝘷𝘦𝘳𝘴𝘪𝘰́𝘯 🎲',
-  'game': '𝘑𝘶𝘦𝘨𝘰𝘴 🎮'
   'freefire': '𝘍𝘳𝘦𝘦 𝘍𝘪𝘳𝘦 📌', 
+  'game': '𝘑𝘶𝘦𝘨𝘰𝘴 🎮',
   'audio': '𝘈𝘶𝘥𝘪𝘰𝘴 🔉', 
   'anime': '𝘈𝘯𝘪𝘮𝘦 🌸',
   'sticker': '𝘚𝘵𝘪𝘤𝘬𝘦𝘳𝘴 🏞',
@@ -30,7 +30,7 @@ const defaultMenu = {
   before: `
 *──ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ*
 
-“ Holi *%name* Te presento mi menú.”
+“ Saludos *%name* Te presento mi menú.”
 
  ⬣「 *Info User* 」⬣
 ┃ *👤 Nombre ∙* %name
@@ -40,16 +40,16 @@ const defaultMenu = {
 %readmore
 ━ 〆 ━ 〆 ━ 〆 ━ 〆 ━ 〆 ━ 〆 ━ 〆
 
-\t\t\t𝐃 𝐀 𝐑 𝐋 𝐘 - 𝐌 𝐄 𝐍 𝐔́
+\t\t\t𝐒 𝐈 𝐒 𝐊 𝐄 𝐃 - 𝐌 𝐄 𝐍 𝐔́
 `.trimStart(),
-header: '🦋「 *%category* 」🦋',
+header: '「 *%category* 」',
 body: '┃⇾ *%cmd*\n',
-footer: '🧸 ღღღღ 🧸\n',
+footer: '──ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ\n',
 after: '',
 }
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
-  m.react('👸🏻')
+  m.react('⭐')
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, limit, level } = global.db.data.users[m.sender]
@@ -169,4 +169,4 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-        }
+      }
