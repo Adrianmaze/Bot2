@@ -55,8 +55,8 @@ const fkontak = {
 await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.help = ['menuff']
+handler.help = ['menuff', 'menu4']
 handler.tags = ['freefire' ,'main'] 
-handler.command = ['menuff', 'menufreefire'] 
+handler.command = ['menuff', 'menufreefire', 'menu4'] 
 export default handler
 
