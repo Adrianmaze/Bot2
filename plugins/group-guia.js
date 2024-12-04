@@ -3,7 +3,7 @@ let time = global.db.data.users[m.sender].lastcofre + 0 // 36000000 10 Horas //8
 if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
 
 let img = 'https://i.ibb.co/dP7G5Yg/file.jpg' 
-let texto = `𝙂𝙪𝙞𝙖 𝟭
+let texto = `𝙂𝙪𝙞𝙖
 
 *𝘈𝘥𝘮𝘪𝘯𝘪𝘴𝘵𝘳𝘢𝘤𝘪𝘰́𝘯*
 
