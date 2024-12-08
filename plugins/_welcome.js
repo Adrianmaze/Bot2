@@ -10,7 +10,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   
   let chat = global.db.data.chats[m.chat]
   let welcome = ''
-  let bye ''
+  let bye = ''
 
   if (chat.bienvenida && m.messageStubType == 27) {
     if (chat.sWelcome){
@@ -102,4 +102,4 @@ export async function before(m, { conn, participants, groupMetadata }) {
     // Enviar el mensaje con la imagen y el texto
     await conn.sendMessage(m.chat, message, { quoted: m })
   }
-  }
+}
