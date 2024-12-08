@@ -11,9 +11,17 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let chat = global.db.data.chats[m.chat]
 
   if (chat.bienvenida && m.messageStubType == 27) {
+    if (chat.sWelcome){
+      let user = `@${m.messageStubParameters[0].split`@`[0]}`
+      let welcome = chat.sWelcome
+        .replace('@user', () => user)
+        .replace('@group', () => groupMetadata.subject)
+        .replace('@desc', () => groupMetadata.desc || 'sin descripción');
+    } else {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sWelcome || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenido 」\n└┬• 「 ${user} 」\n   │👸🏻  Bienvenido a\n   │🌸  ${groupMetadata.subject}\n   │🩷  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
-
+    let welcome = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 Bienvenido 」\n└┬• 「 ${user} 」\n   │🌪️  Bienvenido a\n   │🚩  ${groupMetadata.subject}\n   │🩸  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
+    }
+    let text = welcome
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
       mentions: [m.messageStubParameters[0]],
@@ -24,7 +32,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/qDmsnBq/file.jpg',
           thumbnail: img
         }
       },
@@ -36,9 +44,17 @@ export async function before(m, { conn, participants, groupMetadata }) {
   }
 
   if (chat.bienvenida && m.messageStubType == 28) {
+    if (chat.sBye) {
+          let user = `@${m.messageStubParameters[0].split`@`[0]}`
+      let bye = chat.sBye
+        .replace('@user', () => user)
+        .replace('@group', () => groupMetadata.subject)
+        .replace('@desc', () => groupMetadata.desc || 'sin descripción');
+    } else {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
-
+    let bye = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    }
+    let text = bye
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
       mentions: [m.messageStubParameters[0]],
@@ -49,7 +65,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/qDmsnBq/file.jpg',
           thumbnail: img
         }
       },
@@ -62,7 +78,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.bienvenida && m.messageStubType == 32) {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let text = chat.sBye || `┌─• 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let text = chat.sBye || `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 
     let message = {
       caption: text,  // Aquí va el texto que acompañará a la imagen
@@ -74,7 +90,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: '𝙋𝙊𝙒𝙀𝙍 𝙄𝘼',
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://i.ibb.co/vZRCPsC/file.jpg',
+          thumbnailUrl: 'https://i.ibb.co/qDmsnBq/file.jpg',
           thumbnail: img
         }
       },
