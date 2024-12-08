@@ -9,17 +9,19 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let img = await (await fetch(pp)).buffer()
   
   let chat = global.db.data.chats[m.chat]
+  let welcome = ''
+  let bye ''
 
   if (chat.bienvenida && m.messageStubType == 27) {
     if (chat.sWelcome){
       let user = `@${m.messageStubParameters[0].split`@`[0]}`
-      let welcome = chat.sWelcome
+      welcome = chat.sWelcome
         .replace('@user', () => user)
         .replace('@group', () => groupMetadata.subject)
         .replace('@desc', () => groupMetadata.desc || 'sin descripción');
     } else {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let welcome = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 Bienvenido 」\n└┬• 「 ${user} 」\n   │🌪️  Bienvenido a\n   │🚩  ${groupMetadata.subject}\n   │🩸  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
+    welcome = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 Bienvenido 」\n└┬• 「 ${user} 」\n   │🌪️  Bienvenido a\n   │🚩  ${groupMetadata.subject}\n   │🩸  Descripción:\n${groupMetadata.desc || 'sin descripción'}\n   └───────────────┈ ⳹`
     }
     let text = welcome
     let message = {
@@ -46,13 +48,13 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.bienvenida && m.messageStubType == 28) {
     if (chat.sBye) {
           let user = `@${m.messageStubParameters[0].split`@`[0]}`
-      let bye = chat.sBye
+      bye = chat.sBye
         .replace('@user', () => user)
         .replace('@group', () => groupMetadata.subject)
         .replace('@desc', () => groupMetadata.desc || 'sin descripción');
     } else {
     let user = `@${m.messageStubParameters[0].split`@`[0]}`
-    let bye = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    bye = `┌─• 𝙎𝙄𝙎𝙆𝙀𝘿-𝘽𝙊𝙏 \n│「 ADIOS 👋 」\n└┬• 「 ${user} 」\n   │😂  Se fue\n   │👋🏻 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
     }
     let text = bye
     let message = {
@@ -100,4 +102,4 @@ export async function before(m, { conn, participants, groupMetadata }) {
     // Enviar el mensaje con la imagen y el texto
     await conn.sendMessage(m.chat, message, { quoted: m })
   }
-}
+  }
