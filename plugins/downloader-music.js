@@ -11,7 +11,7 @@ if (command == 'music' || command == 'musica') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 ᡣ𐭩
+const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 
 
 ⛥ Titulo
 » ${yt_play[0].title}
@@ -82,7 +82,7 @@ if (command == 'play2' || command == 'video') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 ᡣ𐭩
+const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 
 
 ⛥ Titulo
 » ${yt_play[0].title}
@@ -166,7 +166,7 @@ if (command == 'play3' || command == 'playdoc') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 ᡣ𐭩
+const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 
 ⛥ Titulo
 » ${yt_play[0].title}
@@ -236,7 +236,7 @@ if (command == 'play4' || command == 'playdoc2') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔 ᡣ𐭩
+const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 
 ⛥ 𝚃𝚒𝚝𝚞𝚕𝚘
 » ${yt_play[0].title}
