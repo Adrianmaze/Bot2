@@ -32,7 +32,7 @@ const texto1 = `Play-
 » ${yt_play[0].url}
 
 
-> _*Su audio se esta enviando...*_`.trim();
+> _*Enviando su audio...*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
 try {
@@ -78,7 +78,7 @@ await m.react('❌');
 console.log(e);
 }}}}}}}
 
-if (command == 'video' || command == 'video') {
+if (command == 'play2' || command == 'video') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
@@ -104,7 +104,7 @@ const texto1 = `Play-
 
 
 
-> _*Su video se esta enviando...*_`.trim();
+> _*Enviando su video...*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
 try {
@@ -162,7 +162,7 @@ await m.react('❌');
 console.log(e);
 }}}}}}}}
 
-if (command == 'audio' || command == 'audio') {
+if (command == 'play3' || command == 'playdoc') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
@@ -187,7 +187,7 @@ const texto1 = `Play-
 » ${yt_play[0].url}
 
 
-> > _*Su audio se esta enviando...*_`.trim();
+> _*Enviando su audio en documento.*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
 try {
@@ -232,7 +232,7 @@ await m.react('❌');
 console.log(e);
 }}}}}}}
 
-if (command == 'video' || command == 'video') {
+if (command == 'play4' || command == 'playdoc2') {
 if (!text) throw `Que Busca\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
@@ -257,7 +257,7 @@ const texto1 = `Play-
 » ${yt_play[0].url}
 
 
-> > _*Su Video se esta enviando... En documento.*_`.trim();
+> _*Enviando su video en documento.*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
 try {
@@ -279,9 +279,9 @@ await m.react('❌');
 console.log(e2);
 }}}
 }
-handler.help = ['music', 'video'];
+handler.help = ['musica', 'play2', 'play3', 'play4'];
 handler.tags = ['downloader'];
-handler.command = ['music', 'video']
+handler.command = ['music', 'play2', 'video', 'play3', 'play4', 'musica', 'playdoc', 'playdoc2']
 export default handler;
 
 async function search(query, options = {}) {
@@ -374,4 +374,4 @@ if (data.status === 'ok') {
   } else {
     throw new Error("No se pudo obtener la descarga desde 9Convert");
   }
-                                                                              }
+                                   }
