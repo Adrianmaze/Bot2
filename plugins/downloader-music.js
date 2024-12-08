@@ -262,7 +262,7 @@ const delius = await apiResponse.json();
 if (!delius.status) return m.react("❌");
 const downloadUrl = delius.data.download.url;
 //const fileSize = await getFileSize(downloadUrl);
-await conn.sendMessage(m.chat, { document: { url: downloadUrl }, fileName: `${yt_play[0].title}.mp4`, caption: `╭━❰  Versión  ❱━⬣\n┃ 💜 Yotsubabot\n┃ ${yt_play[0].title}\n╰━━━━━❰ *2.0* ❱━━━━⬣`, thumbnail: yt_play[0].thumbnail, mimetype: 'video/mp4' }, { quoted: m })     
+await conn.sendMessage(m.chat, { document: { url: downloadUrl }, fileName: `${yt_play[0].title}.mp4`, caption: `┍━━━━━━┙❃┕━━━━━━┑\n┃✧ global.packname\n┃✧ ${yt_play[0].title}\n┕━━━━━━┑❃┍━━━━━━┙`, thumbnail: yt_play[0].thumbnail, mimetype: 'video/mp4' }, { quoted: m })     
 } catch (e1) {
 try {
 let d2 = await fetch(`https://exonity.tech/api/ytdlp2-faster?apikey=adminsepuh&url=${yt_play[0].url}`);
