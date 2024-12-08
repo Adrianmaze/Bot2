@@ -31,7 +31,6 @@ const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 ⛥ 𝙻𝚒𝚗𝚔
 » ${yt_play[0].url}
 
-
 > _*Enviando su audio...*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
@@ -101,8 +100,6 @@ const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 ❃ ───── ✧ ───── ❃
 ⛥ 𝙻𝚒𝚗𝚔
 » ${yt_play[0].url}
-
-
 
 > _*Enviando su video...*_`.trim();
 
@@ -186,7 +183,6 @@ const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 ⛥ 𝙻𝚒𝚗𝚔
 » ${yt_play[0].url}
 
-
 > _*Enviando su audio en documento.*_`.trim();
 
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, rcanal);
@@ -255,7 +251,6 @@ const texto1 = `𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝙇𝘼𝙔
 ❃ ───── ✧ ───── ❃
 ⛥ 𝙻𝚒𝚗𝚔
 » ${yt_play[0].url}
-
 
 > _*Enviando su video en documento.*_`.trim();
 
