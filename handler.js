@@ -102,6 +102,8 @@ export async function handler(chatUpdate) {
                     chat.antiLink = false
                 if (!('delete' in chat))
                     chat.delete = false
+                if (!('modohorny' in chat))
+                    chat.modohorny = false
                  if (!('nsfw' in chat))
                     chat.nsfw = false
                 if (!isNumber(chat.expired))
@@ -116,6 +118,7 @@ export async function handler(chatUpdate) {
                     audios: false,
                     antiLink: true,
                     delete: false,
+                    modohorny: false,
                     nsfw: false, 
                     expired: 0,
                 }
